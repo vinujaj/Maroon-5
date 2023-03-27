@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	
+	<meta charset="UTF-8">
+	
+	<title>MAROON 5-STORE</title>
+	<link href="css/externalstyle.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="css/buy_products.css">
+	<link rel="icon" href="image/logo5.ico" type="image/x-icon">
+	
+	</head>
+	
+	<body>
+		<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+		<script>
+			var mybutton=document.getElementById("myBtn")
+			window.onscroll = function() {scrollFunction()};
+			function scrollFunction() {
+			  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			   mybutton.style.display = "block";
+			  } else {
+				mybutton.style.display = "none";
+			  }
+			}
+			function topFunction() {
+			  document.body.scrollTop = 0;
+			  document.documentElement.scrollTop = 0;
+			}
+	</script>
+		<!---------------------------------------------Start Navigation------------------------------------------------->   
+		<header>
+		   <div class="container">
+			   <div id="branding">
+				  <img src="image/logo1.png" alt="logo">
+			   </div>
+			   <nav>
+				   <ul>
+					   <li><a href="home.html">Home</a></li>
+					   <li><a href="gallerynew21.html">Gallery</a></li>
+					   <li><a href="Listen.html">Listen</a></li>
+					   <li><a href="quiz.html">Quiz</a></li>
+					   <li class="current"><a href="buy_products.html">Store</a></li>
+					   <li><a href="query.html">Contact Us</a></li>                    
+				   </ul>
+			   </nav>
+		   </div>
+	   </header>
+	   <!----------------------------------------------End Navigation------------------------------------------------->       
+		  
+		<br /><br />
+		<br /><br />
+		<br><br><br><br><br><br>
+		
+		<figure class="product">
+			<img src="image/BlackHoodie.jpg" alt="Black Hoodie picture" />
+			<figcaption>
+				<h3>Black Hoodie</h3>
+				<p><br />Sizes: S / M / L<br/>Beautiful Mistakes Hoodie in 100% Cotton</p>
+			</figcaption>
+			<a href="#"></a>
+
+		</figure>
+		
+		<figure class="product">
+			<img src="image/WhiteShirt.jpeg" alt="white shirt picture" />
+			<figcaption>
+				<h3>White Tshirt</h3>
+				<p><br />Sizes: S / M / L<br />Classic Maroon 5 Tshirt in 100% white cotton</p>
+			</figcaption>
+			<a href="#"></a>
+		</figure>
+		
+		<figure class="product">
+			<img src="image/backpack.jpg" alt="Backpack picture" />
+			<figcaption>
+				<h3>The original Backpack</h3>
+				<p><br />Colors: Purple<br />Casual backpack in a classic shape with a front flap design.</p>
+			</figcaption>
+			<a href="#"></a>
+		</figure>
+		
+		<figure class="product">
+			<img src="image/Jordi.jpeg" alt="Jordi picture " />
+			<figcaption>
+				<h3>Jordi Album Vinyl</h3>
+				<p>The latest album from Maroon 5, JORDI, is the band’s first since the critically acclaimed Red Pill Blues.”</p>
+			</figcaption>
+		</figure>
+		
+		<figure class="product">
+			<img src="image/overexposed.jpeg" alt="overexposed picture" />
+			<figcaption>
+				<h3>overexposed album Vinyl</h3>
+				<p>Overexposed is the fourth studio album by Maroon 5, by Octone Records.</p>
+			</figcaption>
+			<a href="#"></a>
+		</figure>
+		
+		<figure class="product">
+			<img src="image/V.jpg" alt="V picture" />
+			<figcaption>
+				<h3>V album original Vinyl</h3>
+				<p>V is the fifth studio album by American band Maroon 5<br /></p>
+		  </figcaption>
+			<a href="#"></a>
+		</figure>
+
+<hr>
+		
+		<a name="Details"></a>
+		
+		<br>
+		
+		<div>
+			<h2 style="color: white;"><strong>Customer </strong><strong>Details</strong></h2>
+			<input id="customer_name" type="text" placeholder="Enter your name" style="padding: 10px;" /><br /><br />
+			<input id="customer_email" type="text" placeholder="Enter your email" style="padding: 10px;" />
+		</div>
+		
+		<br />
+		
+		<h2 style="color: white;">Select Item</h2>
+		<select id="list" style="padding: 10px;" onchange="getSelectValue();">
+			<option>-- Select an item --</option>
+			<option value="Black Hoodie">Black Hoodie</option>
+			<option value="White Tshirt">White Tshirt</option>
+			<option value="The Original Backpack">The original Backpack</option>
+			<option value="Jordi Album Vinyl">Jordi Album Vinyl</option>
+			<option value="Overexposed Album Vinyl">Overexposed album Vinyl</option>
+			<option value="V Album Vinyl">V album Vinyl</option>
+		</select>
+		
+		<br />
+<a name="order"></a>
+	<h2 style="color: white;">Customer Order</h2>
+	<br>
+	<br>
+		<div>
+			<table class="grocery_table" id="customer_order" align="center"  style="color: white;">
+				<tr>
+					<th class="table_heading1" style="color: white;">Product Name</th>
+					<th class="table_heading2" style="color: white;">Price per Unit (&pound)</th>
+					<th class="table_heading3" style="color: white;">Quantity</th>
+					<th class="table_heading4" style="color: white;">Total (&pound)</th>
+				</tr>
+			</table>
+
+
+			<p style="color: white; font-weight: bold; font-size: 2em;" id="gross_total"></p>
+		</div>
+		
+		<input type="button" value="Place Order" onclick="placeOrder()">
+		
+		<a name="invoice"></a>
+		
+		<div id="invoice">
+			<h2 style="color: white;">Invoice Summary</h2>
+			<p id="invoice_detail" style="color: white;" ></p>
+		</div>
+	
+	<script>
+  
+    var invoiceDiv = document.getElementById('invoice');
+    invoiceDiv.style.visibility = 'hidden';
+    var index = 1;
+    var totalGross = 0;
+    function getSelectValue() {
+      var selectedValue = document.getElementById("list").value;
+	 
+      var table = document.getElementById("customer_order");
+      var row = table.insertRow(table.rows.length);
+      row.className = "table_heading1";
+
+
+      var cell1 = row.insertCell(0);
+      cell1.id = "itemName" + index;
+      cell1.innerHTML = selectedValue;
+
+      var cell2 = row.insertCell(1);
+      var t2 = document.createElement("input");
+      t2.type = "text";
+      t2.id = "itemRate" + index;
+      t2.className = index;
+	t2.disabled = true;
+//      t2.addEventListener("input", rateChange);
+      // t2.addEventListener('input', rateChange);
+	  t2.value =Math.floor(Math.random() * 50) + 30 
+      cell2.appendChild(t2);
+
+      var cell3 = row.insertCell(2);
+      var t3 = document.createElement("input");
+      t3.type = "text";
+      t3.id = "itemQuantity" + index;
+      t3.className = index;
+      t3.addEventListener('input', quantChange);
+      t3.value = " ";
+
+      cell3.appendChild(t3);
+      var cell4 = row.insertCell(3);
+      var t4 = document.createElement("input");
+      t4.type = "text";
+	t4.disabled = true;
+      t4.id = "itemPrice" + index;
+      t4.className = index;
+      cell4.appendChild(t4);
+	  
+      index++;
+    }
+
+
+
+
+
+    function rateChange(e) {
+      var char = e.data;
+
+      if (char) {
+
+        var charCode = char.charCodeAt(0);
+
+        if (charCode != 46 && charCode > 31
+          && (charCode < 48 || charCode > 57)) {
+          alert("Invalid number");
+          return false;
+        }
+
+      }
+
+
+
+
+      var row = e.target.attributes[2].value;
+
+      //var a = document.getElementById('txtAge1').className;
+      var quantity = document.getElementById("itemQuantity" + row).value;
+
+      document.getElementById("itemPrice" + row).value = e.target.value * quantity;
+      grossAmount();
+
+
+    }
+
+    function quantChange(e) {
+      var char = e.data;
+      if (char) {
+
+        var charCode = char.charCodeAt(0);
+
+        if (charCode != 46 && charCode > 31
+          && (charCode < 48 || charCode > 57)) {
+          alert("Invalid number");
+          return false;
+        }
+		
+      }
+	  
+
+      var row = e.target.attributes[2].value;
+      //var a = document.getElementById('txtAge1').className;
+      var rate = document.getElementById("itemRate" + row).value;
+
+      document.getElementById("itemPrice" + row).value = e.target.value * rate;
+      grossAmount();
+    }
+
+    function grossAmount() {
+      var gross = 0;
+
+      for (var i = 1; i < index; i++) {
+
+        gross += parseInt(document.getElementById("itemPrice" + i).value);
+      }
+      totalGross = gross;
+      document.getElementById("gross_total").innerHTML = "Gross Amount : &pound " + gross;
+    }
+
+    function placeOrder() {
+	if ((document.getElementById("customer_email").value == "") && (document.getElementById("customer_name").value == "")) {
+        alert("Please fill in the customer email");
+	  }
+      else if (document.getElementById("customer_name").value == "") {
+        alert("Customer name must be fill!");
+      } else if (document.getElementById("customer_email").value == "") {
+        alert("Please fill in the customer email");
+		
+      }
+	  
+	  else {
+
+        var invoice = "";
+        invoice += "Name : " + document.getElementById("customer_name").value + "<br/>";
+		invoice += "E-mail : " + document.getElementById("customer_email").value + "<br/>";
+        invoice += "<br/>Invoice Details<br/>";
+        invoice += "-------------------<br/><br/>";
+
+        for (var i = 1; i < index; i++) {
+          var rate = document.getElementById("itemRate" + i).value;
+		  var rat=document.getElementById("itemQuantity" + i).value;
+          if (rate == "") {
+            alert("Please fill out unit price!");
+            return false;
+          }
+		  
+		  else if (rate=="") {
+
+            alert("Please fill in a quantity");
+            return false;
+          } else {
+            invoiceDiv.style.visibility = 'visible';
+
+            invoice += "Product : " + document.getElementById("itemName" + i).innerText + "<br/>";
+            invoice += "Quantity : " + document.getElementById("itemQuantity"+i).value + "<br/>";
+            invoice += "Price : &pound " + document.getElementById("itemRate" + i).value + "<br/><br/>";
+
+          }
+
+
+        }
+        invoice += "Total Bill: &pound " + totalGross;
+        document.getElementById("invoice_detail").innerHTML = invoice;
+
+      }
+    }
+	
+	</script>
+
+     
+<!-----------------------------------------------Start Footer-------------------------------------------------->    
+<footer>
+    <section>
+       <div class="container">
+          <div class="box6">
+            <img src="image/logo1.png" alt="TCS Logo" style="width:450px" style="height:150px" >
+			<p> Universal Music Group 2220 Colorado Avenue, Santa Monica, CA <br>90404 (310) 865-4000</p>    
+  
+          </div>
+          <div id="box7">
+              <h1>Development Team</h1>
+              <table id="team">
+               <tr>
+				   <td><a href="pageeditor/ranudi.html"><img src="image/ranudi.png" alt="student1" class="team-img" ></a></td>
+				   <td><a href="pageeditor/vinuja.html"><img src="image/vinuja.png" alt="student2" class="team-img" ></a></td>
+				   <td><a href="pageeditor/ranudi.html"><img src="image/nimshi.png" alt="student3" class="team-img" ></a></td>
+				   <td><a href="pageeditor/dinil.html"><img src="image/dinil.png" alt="student4" class="team-img" ></a></td>
+               </tr>               
+            </table>
+            <a href="about.html" class="button">Meet Us</a>              
+          </div>
+       </div>
+       <div style="background-color: #121212">
+           <div class="container2">
+            <div id="footer-bar">
+             <p> All copyright credits are reserved to the <a href="https://www.maroon5.com/">"Maroon 5"</a></p>
+              <table>
+                  <tr>
+                    <td><a href="site_map_1.html" class="button2">Site Map</a></td>
+                    <td><a href="pageeditor/ranudi.html" class="button2">Page Editor : Ranudi Kumarawadu</a></td> 
+                  </tr>
+              </table>
+               </div>
+           </div>
+       </div>
+    </section>
+        
+    </footer>
+<!------------------------------------------------End Footer--------------------------------------------------->
+<style>.footer,.generic-footer{margin-bottom:98px}@media (min-width:374px){.footer,.generic-footer{margin-bottom:78px}}@media (min-width:546px){.footer,.generic-footer{margin-bottom:56px}}@media (min-width:1055px){.footer,.generic-footer{margin-bottom:0}}
+	</style>
+	</body>
+</html>

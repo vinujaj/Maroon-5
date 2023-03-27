@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    background: url("remix.jfif") no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.profile-card{ /*styling the profile card*/
+    width: 400px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    padding: 2rem 1rem;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;    
+}
+
+.card-header{ 
+    padding: 60px 40px;
+    position: relative;
+    width: 350px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2px solid #00002a;
+    backdrop-filter: blur(20px);
+    border: 1px solid white; 
+    border-radius: 8px;
+}
+
+.pic{ /*styling the image*/
+    display: inline-block;
+    padding: 8px;
+    background: linear-gradient(130deg, #74b9ff,#e66767);
+    margin: auto;
+    border-radius: 50%;
+    background-size: 150% 150%;
+    animation: animated-gradient 2s linear infinite;
+}
+
+@keyframes animated-gradient{ /*changes style of animation in percentages*/
+    25%{
+        background-position: left bottom;
+    }
+    50%{
+        background-position: right bottom;
+    }
+    75%{
+        background-position: right top;
+    }
+    100%{
+        background-position: left top;
+    }
+}
+
+.pic img{
+    display: block;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.name{
+    color: #f2f2f2;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0;
+
+}
+
+.task{
+    font-size: 20px;
+    color:#ffffff ;
+}
+
+.sm{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.sm a{
+    color:#f2f2f2 ;
+    width: 56px;
+    font-size: 22px;
+    transition: .3s linear;
+}
+
+.sm a:hover{
+    color: #1076c9;
+}
+
+.task-style{ /*styling the task box*/
+    position: relative;
+    display: inline-block;
+    color: mediumpurple;
+    text-transform: uppercase;
+    border-radius: 6px;
+    margin-top: 7px;
+    margin-bottom: -9px;
+    transition: .3s linear;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.task-style:hover{ /*hovering effect on the task box*/
+    color: #255784;
+    box-shadow: 0 0 10px mediumpurple,0 0 20px mediumpurple,0 0 30px mediumpurple;
+    transition-delay: 1s;
+}
+
+
+p{
+    color: aliceblue;
+}

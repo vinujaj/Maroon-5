@@ -1,0 +1,197 @@
+html, body {
+  height: 100%;
+  text-align: center;
+  overflow: hidden;
+  margin: 10% 0; 
+  background-color: #212121;
+}
+
+.home {
+  height: 60px;
+  margin: 0 auto;
+  position: absolute;
+  top: 11%;
+  right: 600px;
+  transform: translateY(-50%);
+  width: 320px;
+
+}
+
+
+.Event {
+  height: 60px;
+  margin: 0 auto;
+  position: absolute;
+  top: 34.5%;
+  right: 1200px;
+  transform: translateY(-50%);
+  width: 320px;
+}
+
+.gallery {
+  height: 60px;
+  margin: 0 auto;
+  position: absolute;
+  top: 34.5%;
+  right: 900px;
+  transform: translateY(-50%);
+  width: 320px;
+}
+
+.Store {
+  height: 60px;
+  margin: 0 auto;
+  position: absolute;
+  top: 34.5%;
+  right: 600px;
+  transform: translateY(-50%);
+  width: 320px;
+}
+
+.quiz {
+  height: 60px;
+  margin: 0 auto;
+  position: absolute;
+  top: 34.5%;
+  right: 300px;
+  transform: translateY(-50%);
+  width: 320px;
+}
+
+.aboutUs {
+  height: 60px;
+  margin: 0 auto;
+  position: absolute;
+  top: 34.5%;
+  right: 0px;
+  transform: translateY(-50%);
+  width: 320px;
+}
+
+.box {
+  fill: transparent;
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -474;
+  stroke-width: 6px;
+  stroke: purple;
+}
+
+
+/*inside store*/
+.EX_1 {
+  height: 60px;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  right: 958px;
+  transform: translateY(-50%);
+  width: 320px;
+}
+.EX_2 {
+  height: 60px;
+  margin: 0 auto;
+  position: absolute;
+  top: 60.5%;
+  right: 958px;
+  transform: translateY(-50%);
+  width: 320px;
+}
+
+
+/*Inside About Us*/
+
+.Dinil {
+  height: 60px;
+  margin: 0 auto;
+  position: absolute;
+  top: 49.5%;
+  right: 268px;
+  transform: translateY(-50%);
+  width: 320px;
+}
+.Vinuja {
+  height: 60px;
+  margin: 0 auto;
+  position: absolute;
+  top: 60%;
+  right: 268px;
+  transform: translateY(-50%);
+  width: 320px;
+}
+.Ranudi {
+  height: 60px;
+  margin: 0 auto;
+  position: absolute;
+  top: 71%;
+  right: 268px;
+  transform: translateY(-50%);
+  width: 320px;
+}
+.Nimshi {
+  height: 60px;
+  margin: 0 auto;
+  position: absolute;
+  top: 81.5%;
+  right: 268px;
+  transform: translateY(-50%);
+  width: 320px;
+}
+
+
+.name {
+  color: #fff;
+  font-family: "Bahnschrift";
+  font-size: 22px;
+  letter-spacing: 8px;
+  line-height: 32px;
+  padding: 10px;
+  position: relative;
+  top: -60px;
+  
+}
+.name:hover {
+  background-color: purple;
+  box-shadow: 0 0 5px  #C04BE7, 0 0 25px  #C04BE7, 0 0 50px  #C04BE7, 0 0 200px  #C04BE7;
+
+}
+@font-face{
+  font-family: "Bahnschrift";
+}
+
+@keyframes draw {
+  0% {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+  }
+  100% {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+    stroke-width: 4px;
+  }
+}
+
+
+/*Lines*/
+.Line1{
+  position: absolute;
+  top: 38.4%;
+  right: 1250px;
+  stroke: purple;
+  stroke-width:3px;
+}
+
+.Line2{
+  position: absolute;
+  top: 38.4%;
+  right: 150px;
+  stroke: purple;
+  stroke-width:3px;
+}
+.Main1{
+  position: absolute;
+  stroke: purple;
+  top: 13.7%;
+  right: 170px;
+  stroke-width:3px;
+}

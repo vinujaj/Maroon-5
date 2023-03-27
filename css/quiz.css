@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    text-decoration: none;
+    color: white;
+}
+body{
+    background-color:#111;
+    color:white;
+    margin-top:0%;
+}
+h1{
+    text-align: center;
+    font-size:60px;
+    margin-top:10%;
+}
+ul{
+    font-size:250%;
+    margin-top:5%;
+    margin-left:12%;
+}    
+#quiz{
+    width:35%;
+    margin-top:0%;
+    margin-left:34%;
+    transition: transform .2s; 
+    background-color:  #212121;
+}
+#quizimage{
+    position: relative;
+    height: 275px;
+    width: 485px;
+    background-color: purple;
+    border-radius: 10px;
+    margin-top: 40px; 
+    position: center;   
+}
+#quizimage img {
+    position: relative;
+    height: 318px;
+    width: 531px;
+    border-radius: 10px;
+}             
+
+#quiz:hover {
+    transform: scale(1.2); 
+}
+#rules{
+    display: none;
+    font-size:140%; 
+}
+#game{
+    display: none;
+    
+}           
+.ru{
+    border-radius: 25px;
+    background-color: purple;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 200%;
+    padding: 1%;
+    width: 15%;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-left:75%;
+    
+}               
+.ru span:after {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: 10%;
+    transition: 0.5s;
+}
+.ru:hover span {
+    padding-right: 3%;
+}
+
+.ru:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+#box{
+    margin-left:30%;
+    margin-top:10%;
+    font-size:200%;
+    background: color #222;;
+    width:38%;
+    padding:3%;
+    border-radius:20px;
+    height:30%;
+}
+#lab{
+    color:white;
+    font-size: 26.5px;
+    text-align: left;
+    margin-top: 0%;
+    margin-left: 0%;
+    width: 105%;
+    height: 60px;
+    padding: 2%;
+    border-radius: 10%;
+
+}
+.playgame {
+    background-color: purple;
+    font-size: 27px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    color: #FFFFFF;
+    width:100%;
+    height:60px;
+    margin-left:0%;
+    border-radius:10px;
+    margin-top:5%;
+}
+.playgame:hover {
+    transform: scale(1.05);
+}
+#questiones {
+    display:none;
+}
+#q1 {
+    margin-left:17%;
+    margin-top:0%;
+    background-color:#111;
+    width:70%;
+    height:150%;
+}
+
+#hello{
+    color:white;
+    display:none;
+}
+#q2,#q3,#q4,#q5,#q6,#q7,#q8,#q9,#q10 {
+    margin-left:17%;
+    margin-top:0%;
+    background-color:#111;
+    width:70%;
+    display:none;
+    height:150%;
+}
+
+#selection{
+    margin-left:40%;
+    margin-top:0%;
+    font-size:120%;
+}
+#time{
+    font-size:300%;
+    margin-top:8%;
+    margin-left:49%;
+}
+#main{
+    margin-top:0%;
+    width:100%;
+
+}
+#link{
+    font-size:170%;
+    padding:1%;
+    margin-left:5%;
+}
+
+#queimages {
+    height:300px;
+    width:40%;
+    border-radius:4%;
+    margin-left:32%;
+    margin-top:2%; 
+}
+#musicquiz {
+    font-size:250%;
+    text-align:center;
+    margin-top:0%;
+}
+#nextbutton {
+    padding: 5px;
+    margin-left:40%;
+    margin-top:-1%;
+    background-color: purple;
+    color:white;
+    border-radius: 12px;
+    transition: 0.3s ease-in-out;
+}
+#scorecard{
+    display:none;
+    color:black;
+}
+
+
+/* Float four columns side by side */               
+.column {
+    float: left;
+    width: 25%;
+    margin-left:8%;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {
+    margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+/* Style the counter cards */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #222;
+    border: 5px solid purple;
+    width:75%;
+    margin:auto;
+    color:white;
+    border-radius:20px;
+}
+.retry {
+    padding: auto;
+    text-align: center;
+    background-color: #222;
+    border: 5px solid purple;
+    width:75%;
+    margin:auto;
+    color:white;
+    border-radius:20px;
+}
+.retry:hover {
+    transform: scale(1.1);
+    background-color: purple;
+    border: 5px solid #222;
+}

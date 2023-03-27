@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+      <title>MAROON 5-QUERY</title>   
+		<link rel="stylesheet" href="css/query.css">
+		<link href="css/externalstyle.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="image/logo5.ico" type="image/x-icon">
+  <style>
+      body {
+      padding: 0;
+      margin: 0;
+      background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("background1.jpg");
+      background-repeat: no-repeat;
+      background-size:cover;
+      background-attachment: fixed;
+  }
+  </style>
+</head>
+<body>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<script>
+    var mybutton=document.getElementById("myBtn")
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+       mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+</script>
+<!--Start Navigation-->   
+<header>
+  <div class="container">
+    <div id="branding">
+      <img src="image/logo1.png" alt="logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="gallerynew21.html">Gallery</a></li>
+                    <li><a href="Listen.html">Listen</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="buy_products.html">Store</a></li>
+                    <li class="current"><a href="query.html">Contact Us</a></li>                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <br> <br><br><br><br><br><br>
+<section>
+  <div id="top">
+    <h1>Contact Us!</h1>
+      
+  </div>
+
+<div id="mainDiv">
+<form id="mainForm" enctype="text/plain" method="GET" action="mailto:vinujajayathilake@gmail.com">
+
+      <label for="name">Name: </label><br>
+      <input type="text" placeholder="Enter Your Name" id="name" ><br><br>
+
+      <label for="email">Email: </label><br>
+      <input type="text" placeholder="Enter your email" id="email" ><br><br>
+
+      <label for="subject">Subject: </label><br>
+      <select id ="subject">
+        <option value="default" disabled selected hidden>Choose subject from here...</option>
+        <option value="Quiz">Quiz</option>
+        <option value="Event">Event</option>
+        <option value="Delivery">Delivery</option>
+        <option value="More">More</option>
+      </select><br><br>
+
+      <label for="message">Message:  </label><br>
+      <textarea  placeholder="Enter your message: " id="message" required></textarea><br><br>
+
+      <input type="button" name="check" value="View" class="button button3" onclick="validateForm()"/>
+
+
+</form>
+</div>
+</section>
+
+  <div id="secondDiv">
+      <form >
+          <h2>Summary</h2>
+          <!--Name -->
+          <label for="name">Name: </label>
+          <label id="lblName" for="name"></label><br>
+ 
+          <!--Email Address-->
+          <label for="email">E-mail Address: </label>
+          <label id="lblEmail" for="email"></label><br>
+ 
+          <!--Query Subject-->
+          <label for="subject">Subject: </label>
+          <label id="lblSubject" for="subject"></label><br>
+ 
+          <!-- Details-->
+          <label for="message"> Details: </label>
+          <label id="lblDetails" for="message"></label><br>
+ 
+ 
+          <!-- Buttons-->
+          <input type="button" id="edit" value="Edit" class="button button2" onclick="showMainDiv()"/>    
+          <input type="submit" id="submit" value="Submit" class="button button2" form="mainForm"/>  
+      </form>
+  </div>
+  <script src="query.js"></script>
+     
+<!--Start Footer-->    
+<footer>
+  <section>
+     <div class="container">
+        <div class="box6">
+          <img src="image/logo1.png" alt="logo" style="width:450px;" >
+          <p> Universal Music Group 2220 Colorado Avenue, Santa Monica, CA <br>90404 (310) 865-4000</p>    
+        </div>
+        <div id="box7">
+            <h1>Development Team</h1>
+            <table id="team">
+             <tr>
+         <td><a href="pageeditor/ranudi.html"><img src="image/ranudi.png" alt="student1" class="team-img" ></a></td>
+         <td><a href="pageeditor/vinuja.html"><img src="image/vinuja.png" alt="student2" class="team-img" ></a></td>
+         <td><a href="pageeditor/nimshi.html"><img src="image/nimshi.png" alt="student3" class="team-img" ></a></td>
+         <td><a href="pageeditor/dinil.html"><img src="image/dinil.png" alt="student4" class="team-img" ></a></td>
+             </tr>               
+          </table>
+          <a href="about.html" class="button">Meet Us</a>              
+        </div>
+     </div>
+     <div style="background-color: #121212">
+         <div class="container2">
+          <div id="footer-bar">
+           <p> All copyright credits are reserved to the <a href="https://www.maroon5.com/">"Maroon 5"</a></p>
+            <table>
+                <tr>
+                  <td><a href="site_map_1.html" class="button2">Site Map</a></td>
+                  <td><a href="pageeditor/vinuja.html" class="button2">Page Editor : Vinuja Jayathilake</a></td> 
+                </tr>
+            </table>
+             </div>
+         </div>
+     </div>
+  </section>
+</footer>
+<!--End Footer-->
+</body>
+</html>

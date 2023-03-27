@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>MAROON 5-GALLERY</title>
+        <link rel="stylesheet" href="CSs/gallerynew3.css">
+		<link href="css/externalstyle.css" rel="stylesheet" type="text/css">
+        <link rel="icon" href="image/logo5.ico" type="image/x-icon">
+</head>
+<body>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <script>
+        var mybutton=document.getElementById("myBtn")
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+           mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+</script>
+   
+<!-- Navigation-->   
+    <header>
+        <div class="container">
+            <div id="branding">
+               <img src="image/logo1.png" alt="logo">     
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li class="current"><a href="gallerynew21.html">Gallery</a></li>
+                    <li><a href="Listen.html">Listen</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="buy_products.html">Store</a></li>
+                    <li><a href="query.html">Contact Us</a></li>                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+<!--End Navigation-->       
+        
+        <section>
+            <div class="maroon-5 mp4">
+                <img src="image/group_img.jpg" class="video" width="100%" alt="Maroon 5">
+            </div>
+        </section>
+        
+        <div class="head">
+            <h2>WELCOME TO</h2>
+            <p>THE MAROON 5 GALLERY</p>
+        </div>
+    
+          <ul>
+    <li class="dropdownList"><a class="dropbutton">Change Page Background Colour:</a>
+    <div class="dropdownListcontent">
+        <a href="javascript:oneBackground()">Snow White</a><br>
+        <a href="javascript:twoBackground()">Marigold</a><br>
+        <a href="javascript:threeBackground()">Raspherry sorbet</a><br>
+        <a href="javascript:fourBackground()">Mint</a><br><br>
+    </div><br><br><br>
+    </li>
+    <li class ="dropdownList"><a class="dropbutton">Change Body Text Colour:</a>
+    <div class="dropdownListcontent">
+        <a href="javascript:oneText()">Red</a><br>
+        <a href="javascript:twoText()">blue</a><br>
+        <a href="javascript:threeText()">black</a><br>
+        <a href="javascript:fourText()">#ECDB54</a><br>
+
+    </div>
+    </li>
+</ul><br><br><br>
+        
+<div class="MAIN1">
+	<div class="MAIN2">
+		<img src="image/ADAM_LEVINE1.jpg" alt="ADAM LEVINE" onmouseover="enlargeImage(this);displayDescriptionADAMLEVINE(this);">
+	</div>
+	<div class="MAIN2">
+		<img src="image/james.jpg" alt="JAMES VALENTINE"  onmouseover="enlargeImage(this);displayDescriptionJAMESVALENTINE(this);">
+	</div>
+	<div class="MAIN2">
+		<img src="image/Mickey_Madden.jpg" alt="Mickey Madden"  onmouseover="enlargeImage(this); displayDescriptionMickeyMadden(this);">
+	</div>
+	<div class="MAIN2">
+		<img src="image/pj_morton.jpg" alt="PG MORTON"  onmouseover="enlargeImage(this);displayDescriptionPGMORTON(this);">
+	</div>
+
+	<div class="MAIN2">
+		<img src="image/Jesse_Carmichael.jpg" alt="JESSE CARMICHAEL"  onmouseover="enlargeImage(this);displayDescriptionJESSECARMICHAEL(this);">
+	</div>
+    <div class="MAIN2">
+        <img src="image/peoplechoice.jpg" alt="PEOPLE CHOICE AWARDS"  onmouseover="enlargeImage(this);displayDescriptionPEOPLECHOICEAWARDS(this);">
+    </div>
+</div>
+
+<div class="MAIN3">
+	<span onclick="this.parentElement.style.display='none'" class="closebutton">&times;</span>
+	<img id="enlargeImage" style="width:36%" alt="im" > 
+	<div id="imageTitle"></div>
+	<div >
+		<h2 id="imageDescription"></h2>
+	</div>
+</div>
+
+
+
+<script>
+
+function enlargeImage(images) {
+    var enlargeImage = document.getElementById("enlargeImage");
+    var imageTitle = document.getElementById("imageTitle");
+    enlargeImage.src = images.src;
+    imageTitle.innerHTML = images.alt;
+    enlargeImage.parentElement.style.display = "block";
+}
+function displayDescriptionADAMLEVINE(){
+		document.getElementById("imageDescription").innerHTML = "Adam Levine was born on March 18,1979.(age 42)who is the lead vocalist of the pop rock band Maroon 5. Levine began his musical career in 1994."
+}
+function displayDescriptionJAMESVALENTINE(){
+		document.getElementById("imageDescription").innerHTML = "James Valentine was born on October 5,1978(age43).";
+}
+function displayDescriptionMickeyMadden(){
+		document.getElementById("imageDescription").innerHTML = "Mickey Allen Madden was born May 13, 1979 is an American musician, singer and bassist. He was the bassist for the pop rock band Maroon 5.";
+}
+function displayDescriptionPGMORTON(){
+		document.getElementById("imageDescription").innerHTML = "PJ MORTON was born on March 29,1981(age 40).Ryan Morton is the keyboardist and rap vocalist for Maroon 5. He joined the band as a full-time member in 2012. From 2012 to 2014 he filled-in for keyboardist Jesse Carmichael.";
+}
+function displayDescriptionJESSECARMICHAEL(){
+		document.getElementById("imageDescription").innerHTML = "Jesse Royal Carmichael is an American musician, guitarist & keyboardist. He is the secondary guitar player and keyboardist for the band Maroon 5. In 1994, he formed Kara's Flowers with Adam Levine and Mickey Madden. The pair recorded the debut album Songs About Jane.";
+}
+function displayDescriptionPEOPLECHOICEAWARDS(){
+        document.getElementById("imageDescription").innerHTML = "The People's Choice Awards for Favorite Band is one of the awards handed out at the People's Choice Awards. It was first awarded in 2012 to Maroon 5";
+}
+
+
+function oneBackground(){
+            document.body.style.backgroundColor = "white";
+         }
+        function twoBackground(){
+            document.body.style.backgroundColor = "#FDAC53";
+         }
+        function threeBackground(){
+            document.body.style.backgroundColor = "#D2386C";
+         }
+        function fourBackground(){
+            document.body.style.backgroundColor = "#00A170";
+         }
+
+
+
+function oneText(){
+            document.body.style.color = "red";
+         }
+        function twoText(){
+            document.body.style.color = "blue";
+         }
+        function threeText(){
+            document.body.style.color = "black";
+         }
+        function fourText(){
+            document.body.style.color = "#ECDB54";
+         }
+</script>
+     
+<!--Start Footer-->    
+<footer>
+    <section>
+       <div class="container">
+          <div class="box6">
+            <img src="image/logo1.png" alt="Logo" style="width:450px">
+            <p> Universal Music Group 2220 Colorado Avenue, Santa Monica, CA <br>90404 (310) 865-4000</p>   
+          </div>
+          <div id="box7">
+              <h1>Development Team</h1>
+              <table id="team">
+               <tr>
+				   <td><a href="pageeditor/ranudi.html"><img src="image/ranudi.png" alt="student1" class="team-img" ></a></td>
+				   <td><a href="pageeditor/vinuja.html"><img src="image/vinuja.png" alt="student2" class="team-img" ></a></td>
+				   <td><a href="pageeditor/nimshi.html"><img src="image/nimshi.png" alt="student3" class="team-img" ></a></td>
+				   <td><a href="pageeditor/dinil.html"><img src="image/dinil.png" alt="student4" class="team-img" ></a></td>
+               </tr>               
+            </table>
+            <a href="about.html" class="button">Meet Us</a>              
+          </div>
+       </div>
+       <div style="background-color: #121212">
+           <div class="container2">
+            <div id="footer-bar">
+             <p> All copyright credits are reserved to the <a href="https://www.maroon5.com/">"Maroon 5"</a></p>
+              <table>
+                  <tr>
+                    <td><a href="site_map_1.html" class="button2">Site Map</a></td>
+                    <td><a href="pageeditor/dinil.html" class="button2">Page Editor : Dinil Perera</a></td> 
+                  </tr>
+              </table>
+               </div>
+           </div>
+       </div>
+    </section>
+        
+    </footer>
+<!--End Footer-->
+</body>
+</html>

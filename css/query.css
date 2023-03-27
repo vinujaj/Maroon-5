@@ -1,0 +1,119 @@
+body{
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 140%;
+    color: #FFFFFF;
+    text-align: center;
+    background: linear-gradient(to bottom left, #2F00FF, #EE3A58);
+}
+
+#top{
+    background: #58147c;
+    backdrop-filter: blur(2rem);
+    margin: auto;
+    color: #FFFFFF;
+    font-weight: bolder;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+    border-radius: 3rem 3rem 0px 0px;
+    width: 33%;
+}
+
+#name, #number, #email, #subject{
+	padding: 10px;
+    border-radius: 1rem 1rem 1rem 1rem;
+    border-style: none;
+    width: 384px;
+    height: 40px;
+}
+
+#message{
+	padding: 10px;
+    border-radius: 1rem 1rem 1rem 1rem;
+    border-style: none;
+    width: 375px;
+    height: 100px;
+}
+
+#mainForm{
+    top: 10;
+    width: 33%;
+    min-height: 83vh;
+    padding: 4%;
+    display: static;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 140%;
+    color: #d8d8d8;
+    margin: auto;
+    border-radius: 0rem 0rem 2rem 2rem;
+    background: #58147c;
+    z-index: 2;
+    backdrop-filter: blur(2rem);
+    display: block;
+
+}
+
+#secondDiv{
+    top: 10;
+    width: 33%;
+    min-height: 57vh;
+    padding: 5%;
+    display: static;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 140%;
+    color: rgb(250, 240, 240);
+    margin: auto;
+    border-radius: 0rem 0rem 2rem 2rem;
+    background: #58147c;
+    z-index: 2;
+    backdrop-filter: blur(2rem);
+    display: block;
+
+}
+
+.button1, .button2, .button3{
+  background-color: white;
+  color: #2F00FF;
+  border-style: none;
+  border-radius:10px;
+  padding:10px;
+  min-height:20px;
+  min-width: 100px
+}
+
+.button3:hover {
+  background-color: #2F00FF;
+  color: white;
+}
+
+.button2:hover {
+  background-color: #2F00FF;
+  color: white;
+}
+
+.button1:hover {
+  background-color: #2F00FF;
+  color: white;
+}
+
+
+
+section{
+    line-height: 1em;
+}
+
+
